@@ -29,3 +29,33 @@ setInterval(updateTime, 1000);
 
 updateUTCTime();
 setInterval(updateUTCTime, 1000);
+
+function getBitcoinPrice() {
+    fetch('https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('btcprice').innerHTML = "$" + data.USD;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('btcprice').innerText = 'Error fetching data.';
+        });
+}
+
+function getEtherPrice() {
+    fetch('https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('ethprice').innerHTML = "$" + data.USD;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('ethprice').innerText = 'Error fetching data.';
+        });
+}
+
+getBitcoinPrice()
+setInterval(getBitcoinPrice, 30000); // 30 seconds
+
+getEtherPrice()
+setInterval(getEtherPrice, 30000); // 30 seconds

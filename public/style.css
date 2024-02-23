@@ -15,13 +15,13 @@ body {
     font-size: 40pt;
 }
 
-.timetext {
+.desctext {
     color: lightgray;
     font-family: monospace;
     font-weight: bold;
 }
 
-.time {
+.highlight {
     color: cyan;
 }
 
