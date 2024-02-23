@@ -15,6 +15,16 @@ body {
     font-size: 40pt;
 }
 
+.timetext {
+    color: lightgray;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.time {
+    color: lightcyan;
+}
+
 .container {
     overflow: auto;
     display: grid;
