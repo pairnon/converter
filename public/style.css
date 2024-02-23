@@ -11,6 +11,10 @@ body {
     color: white;
 }
 
+.pagetitle {
+    font-size: 40pt;
+}
+
 .container {
     overflow: auto;
     display: grid;
