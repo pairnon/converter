@@ -26,6 +26,7 @@ body {
 }
 
 .container {
+    min-width: 100%;
     overflow: auto;
     display: grid;
     place-items: center;
