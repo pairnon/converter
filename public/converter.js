@@ -34,6 +34,20 @@ document.getElementById('BTCtoUSD').addEventListener('submit', function(event) {
         });
 });
 
+document.getElementById('SATtoBTC').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const satInput = document.getElementById('sats').value;
+    const btcAmount = satInput / 100000000;
+    document.getElementById('sbtcValue').innerText = `BTC: ${btcAmount}`;
+});
+
+document.getElementById('BTCtoSAT').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const btcInput = document.getElementById('sbtc').value;
+    const satAmount = btcInput * 100000000;
+    document.getElementById('satValue').innerText = `Sats: ${satAmount}`;
+});
+
 document.getElementById('USDtoETH').addEventListener('submit', function(event) {
     event.preventDefault();
     const usdInput = document.getElementById('eusd').value;
