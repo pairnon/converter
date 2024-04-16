@@ -65,12 +65,16 @@ function getBitcoinFees() {
         .then(response => response.json())
         .then(data => {
             document.getElementById('fasttx').innerHTML = data.fastestFee + " sat/vB";
-            document.getElementById('midtx').innerHTML = data.hourFee + " sat/vB";
+            document.getElementById('midtx').innerHTML = data.halfHourFee + " sat/vB";
+            document.getElementById('slowtx').innerHTML = data.hourFee + " sat/vB";
+            document.getElementById('mintx').innerHTML = data.economyFee + " sat/vB";
         })
         .catch(error => {
             console.error('Error fetching data:', error);
             document.getElementById('fasttx').innerText = 'Error fetching data.';
             document.getElementById('midtx').innerText = 'Error fetching data.';
+            document.getElementById('slowtx').innerText = 'Error fetching data.';
+            document.getElementById('mintx').innerText = 'Error fetching data.';
         });
 }
 
