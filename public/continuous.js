@@ -59,3 +59,20 @@ setInterval(getBitcoinPrice, 30000); // 30 seconds
 
 getEtherPrice()
 setInterval(getEtherPrice, 30000); // 30 seconds
+
+function getBitcoinFees() {
+    fetch('https://mempool.space/api/v1/fees/recommended')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('fasttx').innerHTML = data.fastestFee + " sat/vB";
+            document.getElementById('midtx').innerHTML = data.hourFee + " sat/vB";
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('fasttx').innerText = 'Error fetching data.';
+            document.getElementById('midtx').innerText = 'Error fetching data.';
+        });
+}
+
+getBitcoinFees()
+setInterval(getBitcoinFees, 30000); // 30 seconds
