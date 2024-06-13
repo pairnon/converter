@@ -51,3 +51,19 @@ body {
     font-weight: bold;
     margin-top: 10px;
 }
+
+.green {
+    color: #66d985;
+}
+
+.orange {
+    color: #f7931a;
+}
+
+.tan {
+    color: #cfad70;
+}
+
+.blue {
+    color: #48cbd9;
+}
