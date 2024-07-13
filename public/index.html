@@ -9,71 +9,85 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="pagetitle">Welcome</h1>
-        <p class="desctext">Local Time: <span class="highlight" id="currentTime"></span>&nbsp;&nbsp;&nbsp;&nbsp;UTC Time: <span class="highlight" id="currentUTCTime"></span></p>
-        <p class="desctext">BTC Price: <span class="price orange" id="btcprice"></span>&nbsp;&nbsp;&nbsp;&nbsp;ETH Price: <span class="price blue" id="ethprice"></span></p>
-        <p class="desctext">BTC Fast Tx: <span class="fee" id="fasttx"></span>&nbsp;&nbsp;&nbsp;&nbsp;BTC Mid Tx: <span class="fee" id="midtx"></span></p>
-        <p class="desctext">BTC Slow Tx: <span class="fee" id="slowtx"></span>&nbsp;&nbsp;&nbsp;&nbsp;BTC Min Tx: <span class="fee" id="mintx"></span></p>
+        <div class="heading">
+            <h1 class="pagetitle">Welcome</h1>
+            <p class="desctext">Local Time: <span class="highlight" id="currentTime"></span>&nbsp;&nbsp;&nbsp;&nbsp;UTC Time: <span class="highlight" id="currentUTCTime"></span></p>
+            <p class="desctext">BTC Price: <span class="price orange" id="btcprice"></span>&nbsp;&nbsp;&nbsp;&nbsp;ETH Price: <span class="price blue" id="ethprice"></span></p>
+            <p class="desctext">BTC Fast Tx: <span class="fee" id="fasttx"></span>&nbsp;&nbsp;&nbsp;&nbsp;BTC Mid Tx: <span class="fee" id="midtx"></span></p>
+            <p class="desctext">BTC Slow Tx: <span class="fee" id="slowtx"></span>&nbsp;&nbsp;&nbsp;&nbsp;BTC Min Tx: <span class="fee" id="mintx"></span></p>
+        </div>
         <div class="forms">
-            <h1>Convert <span class="green">USD</span> to <span class="orange">BTC</span></h1>
-            <form id="USDtoBTC">
-                <div class="mb-3">
-                    <label class="form-label" for="usd">USD Amount:</label>
-                    <input type="text" id="usd" name="usd" class="form-control" placeholder="Enter amount in USD">
-                </div>
-                <button type="submit" class="btn btn-primary">Convert</button>
-            </form>
-            <h2 id="btcValue" class="output"></p>
+            <div class="form">
+                <h1>Convert <span class="green">USD</span> to <span class="orange">BTC</span></h1>
+                <form id="USDtoBTC">
+                    <div class="mb-3">
+                        <label class="form-label" for="usd">USD Amount:</label>
+                        <input type="text" id="usd" name="usd" class="form-control" placeholder="Enter amount in USD">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert</button>
+                </form>
+                <h2 id="btcValue" class="output"></p>
+            </div>
             
-            <h1>Convert <span class="orange">BTC</span> to <span class="green">USD</span></h1>
-            <form id="BTCtoUSD">
-                <div class="mb-3">
-                    <label class="form-label" for="btc">BTC Amount:</label>
-                    <input type="text" id="btc" name="btc" class="form-control" placeholder="Enter amount in BTC">
-                </div>
-                <button type="submit" class="btn btn-primary">Convert</button>
-            </form>
-            <h2 id="usdValue" class="output"></p>
-            
-            <h1>Convert <span class="tan">Sats</span> to <span class="orange">BTC</span></h1>
-            <form id="SATtoBTC">
-                <div class="mb-3">
-                    <label class="form-label" for="sats">Sats Amount:</label>
-                    <input type="text" id="sats" name="sats" class="form-control" placeholder="Enter amount in Sats">
-                </div>
-                <button type="submit" class="btn btn-primary">Convert</button>
-            </form>
-            <h2 id="sbtcValue" class="output"></p>
+            <div class="form">
+                <h1>Convert <span class="orange">BTC</span> to <span class="green">USD</span></h1>
+                <form id="BTCtoUSD">
+                    <div class="mb-3">
+                        <label class="form-label" for="btc">BTC Amount:</label>
+                        <input type="text" id="btc" name="btc" class="form-control" placeholder="Enter amount in BTC">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert</button>
+                </form>
+                <h2 id="usdValue" class="output"></p>
+            </div>
 
-            <h1>Convert <span class="orange">BTC</span> to <span class="tan">Sats</span></h1>
-            <form id="BTCtoSAT">
-                <div class="mb-3">
-                    <label class="form-label" for="sbtc">BTC Amount:</label>
-                    <input type="text" id="sbtc" name="sbtc" class="form-control" placeholder="Enter amount in BTC">
-                </div>
-                <button type="submit" class="btn btn-primary">Convert</button>
-            </form>
-            <h2 id="satValue" class="output"></p>
+            <div class="form">
+                <h1>Convert <span class="tan">Sats</span> to <span class="orange">BTC</span></h1>
+                <form id="SATtoBTC">
+                    <div class="mb-3">
+                        <label class="form-label" for="sats">Sats Amount:</label>
+                        <input type="text" id="sats" name="sats" class="form-control" placeholder="Enter amount in Sats">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert</button>
+                </form>
+                <h2 id="sbtcValue" class="output"></p>
+            </div>
+
+            <div class="form">
+                <h1>Convert <span class="orange">BTC</span> to <span class="tan">Sats</span></h1>
+                <form id="BTCtoSAT">
+                    <div class="mb-3">
+                        <label class="form-label" for="sbtc">BTC Amount:</label>
+                        <input type="text" id="sbtc" name="sbtc" class="form-control" placeholder="Enter amount in BTC">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert</button>
+                </form>
+                <h2 id="satValue" class="output"></p>
+            </div>
         
-            <h1>Convert <span class="green">USD</span> to <span class="blue">ETH</span></h1>
-            <form id="USDtoETH">
-                <div class="mb-3">
-                    <label class="form-label" for="eusd">USD Amount:</label>
-                    <input type="text" id="eusd" name="eusd" class="form-control" placeholder="Enter amount in USD">
-                </div>
-                <button type="submit" class="btn btn-primary">Convert</button>
-            </form>
-            <h2 id="ethValue" class="output"></p>
+            <div class="form">
+                <h1>Convert <span class="green">USD</span> to <span class="blue">ETH</span></h1>
+                <form id="USDtoETH">
+                    <div class="mb-3">
+                        <label class="form-label" for="eusd">USD Amount:</label>
+                        <input type="text" id="eusd" name="eusd" class="form-control" placeholder="Enter amount in USD">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert</button>
+                </form>
+                <h2 id="ethValue" class="output"></p>
+            </div>
 
-            <h1>Convert <span class="blue">ETH</span> to <span class="green">USD</span></h1>
-            <form id="ETHtoUSD">
-                <div class="mb-3">
-                    <label class="form-label" for="eth">ETH Amount:</label>
-                    <input type="text" id="eth" name="eth" class="form-control" placeholder="Enter amount in ETH">
-                </div>
-                <button type="submit" class="btn btn-primary">Convert</button>
-            </form>
-            <h2 id="eusdValue" class="output"></p>
+            <div class="form">
+                <h1>Convert <span class="blue">ETH</span> to <span class="green">USD</span></h1>
+                <form id="ETHtoUSD">
+                    <div class="mb-3">
+                        <label class="form-label" for="eth">ETH Amount:</label>
+                        <input type="text" id="eth" name="eth" class="form-control" placeholder="Enter amount in ETH">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Convert</button>
+                </form>
+                <h2 id="eusdValue" class="output"></p>
+            </div>
             
             <br>
         </div>
