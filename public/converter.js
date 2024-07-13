@@ -36,6 +36,38 @@ document.getElementById('BTCtoUSD').addEventListener('submit', function(event) {
         });
 });
 
+document.getElementById('SATtoUSD').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const satInput = document.getElementById('SATtoUSD_input').value;
+    const btcAmount = satInput / 100000000;
+    fetch(btcURL)
+        .then(response => response.json())
+        .then(data => {
+            const usdAmount = btcAmount * data.USD;
+            document.getElementById('SATtoUSD_output').innerText = `USD: ${usdAmount.toFixed(rounding_decimal_places)}`;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('SATtoUSD_output').innerText = 'Error fetching data.';
+        });
+});
+
+document.getElementById('USDtoSAT').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const usdInput = document.getElementById('USDtoSAT_input').value;
+    fetch(btcURL)
+        .then(response => response.json())
+        .then(data => {
+            const btcAmount = usdInput / data.USD;
+            const satAmount = btcAmount * 100000000;
+            document.getElementById('USDtoSAT_output').innerText = `Sats: ${satAmount.toFixed(1)}`;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+            document.getElementById('USDtoSAT_output').innerText = 'Error fetching data.';
+        });
+});
+
 document.getElementById('SATtoBTC').addEventListener('submit', function(event) {
     event.preventDefault();
     const satInput = document.getElementById('SATtoBTC_input').value;
@@ -47,7 +79,7 @@ document.getElementById('BTCtoSAT').addEventListener('submit', function(event) {
     event.preventDefault();
     const btcInput = document.getElementById('BTCtoSAT_input').value;
     const satAmount = btcInput * 100000000;
-    document.getElementById('BTCtoSAT_output').innerText = `Sats: ${satAmount}`;
+    document.getElementById('BTCtoSAT_output').innerText = `Sats: ${satAmount.toFixed(1)}`;
 });
 
 document.getElementById('USDtoETH').addEventListener('submit', function(event) {
