@@ -1,5 +1,5 @@
 # converter
-Static site to convert between units
+Static site to convert between currencies
 
 ## How to run
 1. Install [bun.](https://bun.sh/docs/installation)
