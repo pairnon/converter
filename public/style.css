@@ -12,17 +12,23 @@ body {
 }
 
 .pagetitle {
+    margin-top: 10px;
+    text-align: center;
     font-size: 40pt;
 }
 
 .desctext {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
     color: lightgray;
     font-family: monospace;
     font-weight: bold;
+    font-size: 20pt;
 }
 
 .highlight {
-    color: #05c4c7;
+    color: #ef3838;
 }
 
 .price {
@@ -33,8 +39,10 @@ body {
     color: gold;
 }
 
-.heading {
-    text-align: center;
+.descriptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container {
