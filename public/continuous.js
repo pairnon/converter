@@ -30,35 +30,22 @@ setInterval(updateTime, 1000);
 updateUTCTime();
 setInterval(updateUTCTime, 1000);
 
-function getBitcoinPrice() {
-  fetch("https://min-api.cryptocompare.com/data/price?fsym=BTC&tsyms=USD")
+function getPrices() {
+  fetch("https://min-api.cryptocompare.com/data/pricemulti?fsyms=BTC,ETH&tsyms=USD")
     .then((response) => response.json())
     .then((data) => {
-      document.getElementById("btcprice").innerHTML = "$" + data.USD;
+      document.getElementById("btcprice").innerHTML = "$" + data.BTC.USD;
+      document.getElementById("ethprice").innerHTML = "$" + data.ETH.USD;
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
       document.getElementById("btcprice").innerText = "Error fetching data.";
-    });
-}
-
-function getEtherPrice() {
-  fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD")
-    .then((response) => response.json())
-    .then((data) => {
-      document.getElementById("ethprice").innerHTML = "$" + data.USD;
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
       document.getElementById("ethprice").innerText = "Error fetching data.";
     });
 }
 
-getBitcoinPrice();
-setInterval(getBitcoinPrice, 30000); // 30 seconds
-
-getEtherPrice();
-setInterval(getEtherPrice, 30000); // 30 seconds
+getPrices();
+setInterval(getPrices, 15000); // 15 seconds
 
 function getBitcoinFees() {
   fetch("https://mempool.space/api/v1/fees/recommended")
