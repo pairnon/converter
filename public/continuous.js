@@ -91,7 +91,8 @@ function getDominances() {
     })
     .catch((error) => {
       console.error("Error fetching data:", error);
-      document.getElementById("ethprice").innerText = "Error fetching data.";
+      document.getElementById("btcd").innerText = "Error fetching data.";
+      document.getElementById("ethd").innerText = "Error fetching data.";
     });
 }
 
