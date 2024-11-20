@@ -14,7 +14,7 @@ body {
 .pagetitle {
     margin-top: 10px;
     text-align: center;
-    font-size: 40pt;
+    font-size: 30pt;
 }
 
 .desctext {
@@ -24,7 +24,7 @@ body {
     color: lightgray;
     font-family: monospace;
     font-weight: bold;
-    font-size: 20pt;
+    font-size: 100%;
 }
 
 .highlight {
@@ -50,7 +50,7 @@ body {
     overflow: auto;
     height: 100vh;
 }
-  
+
 .forms {
     display: flex;
     flex-wrap: wrap;
