@@ -5,6 +5,7 @@ const port = 3000;
 
 const path = require('path');
 app.use('/', express.static(path.join(__dirname, 'index')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
 app.use('/btc', express.static(path.join(__dirname, 'btc')));
 app.use('/bitcoin', express.static(path.join(__dirname, 'btc')));
 app.use('/info', express.static(path.join(__dirname, 'info')));
