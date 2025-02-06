@@ -27,6 +27,7 @@ body {
 
 .price {
     text-decoration: underline;
+    font-size: 50pt;
 }
 
 .fee {
