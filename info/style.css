@@ -1,0 +1,67 @@
+body {
+    overflow: hidden;
+
+    background-image: linear-gradient(rgba(0,  0,  0,  0.7), rgba(0,  0,  0,  0.9)), url('img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+
+    color: white;
+}
+
+.desctext {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    color: lightgray;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 40pt;
+}
+
+.highlight {
+    color: #ef3838;
+}
+
+.price {
+    text-decoration: underline;
+}
+
+.fee {
+    color: gold;
+}
+
+.descriptions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    margin-top: 10%;
+    max-width: 100%;
+    overflow: auto;
+    height: 100vh;
+}
+
+h1 {
+    color: lightgray;
+}
+
+.green {
+    color: #66d985;
+}
+
+.orange {
+    color: #f7931a;
+}
+
+.tan {
+    color: #cfad70;
+}
+
+.blue {
+    color: #48cbd9;
+}
